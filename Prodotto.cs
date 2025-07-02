@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace Esercitazione_Magazzino;
 
 internal class Prodotto
@@ -6,9 +8,9 @@ internal class Prodotto
 {
     
 #region Variabili    
-    public string Nome;
-    public string Codice;
-    public double Prezzo;
+    private string Nome;
+    private string Codice;
+    private double Prezzo;
 #endregion
 #region Costruttori
 // Costruttore Predefinito
@@ -33,10 +35,12 @@ internal class Prodotto
     {
         this.Nome = _Nome;
         this.Prezzo = _Prezzo;
+        this.Codice = GeneraCodiceProdotto();
     }
+    
 #endregion
     
-        #region Metodi
+#region Metodi
 
         //Metodi Pubblici
         public void StampaDettagli()
@@ -51,10 +55,10 @@ internal class Prodotto
             return (Prezzo * percentualeSconto / 100);
         }
 
-        public void ApplicaSconto(float percentualeSconto)
+        public double ApplicaSconto()
 
         {
-            percentualeSconto = 10;
+            return ApplicaSconto(10);
         }
         
         //Metodi Statici
@@ -63,6 +67,7 @@ internal class Prodotto
         {
             return "PROD_001";
         }
+        
         
         
         

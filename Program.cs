@@ -4,4 +4,4 @@ using Esercitazione_Magazzino;
 
 Console.WriteLine("Esercitazione Magazzino");
 
-Prodotto Product1= new Prodotto();
+Prodotto Product1 = new Prodotto();
